@@ -214,3 +214,27 @@ body {
     margin: 3em 0;
     padding: 0 1em;
 }
+
+.about {
+    background: url('bg_about_mobile.png'), linear-gradient(rgba(0, 0, 0, 0.507) 80%, transparent);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.about--title {
+    margin-top: 2em;
+}
+
+.about--text {
+    color: var(--blanco);
+    padding: 0 15%;
+    text-align: center;
+    line-height: 2em;
+    font-size: calc(0.68rem + 1vw);
+    margin-bottom: 3em;
+}
+
+.about--text--span {
+    background: linear-gradient(to right, #e605ec, #4b26f9);
+}
