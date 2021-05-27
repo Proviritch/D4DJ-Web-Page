@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosita: #ff00df;
+    --rosa-claro: #fd58ff;
+    --rosa-oscuro: #a90094;
+    --rosa-neon: #fd58ff;
+    --blanco: #fff;
+}
+
+html {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background: url('bg_tile.jpg');
+    background-size: 40%;
+    /* height: 300vh; */
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header--svg {
+    width: 12.5%;
+    height: auto;
+}
+
+.header--logo {
+    width: 34.375%;
+    height: auto;
+}
+
+.hamburgesa {
+    fill: none;
+    stroke: var(--blanco);
+    stroke-width: 1;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.507);
+    /* position: absolute; */
+    /* top: 400px; */
+}
+
+.main--slider--img, .main--slider {
+    width: 100%;
+    height: auto;
+}
+
+.main--slider--img {
+    /* position: absolute; */
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-name: aparecer;
+    filter: opacity(0);
+    animation-iteration-count: infinite;
+}
+
+.slider--anime {
+    animation-delay: 6s;
+    position: absolute;
+}
+
+.slider--petitmix {
+    animation-delay: 12s;
+    position: absolute;
+}
+
+@keyframes aparecer {
+    0.5% {
+        filter: opacity(1);
+    }
+
+    32.77% {
+        filter: opacity(1)
+    }
+
+    33.33% {
+        filter: opacity(0);
+    }
+}
+
+.main--slider--punto {
+    width: 100%;
+    padding: 1.5em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main--slider--punto--circulo {
+    width: calc(1vw + 0.43rem);
+    height: calc(1vw + 0.43rem);
+    border: 1px solid var(--blanco);
+    animation-name: pelotitas;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+    margin: 0 0.5em;
+}
+
+.main--slider--punto--circulo:nth-of-type(2) {
+    animation-delay: 6s;
+}
+
+.main--slider--punto--circulo:nth-of-type(3) {
+    animation-delay: 12s;
+}
+
+@keyframes pelotitas {
+    0.5% {
+        background: var(--blanco);
+    }
+
+    32.77% {
+        background: var(--blanco);
+    }
+
+    33.33% {
+        background: black;
+    }
+}
+
+/* .section--news--title {
+    color: transparent;
+    border: 1px solid var(--rosa-neon);
+    font-size: 3rem;
+} */
+
+.section--news--title--text {
+    fill: none; 
+    stroke: var(--rosa-neon);
+    stroke-width: 0.3;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.section--news--contenido {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1em;
+    font-size: calc(0.68rem + 1vw);
+    color: var(--blanco);
+    font-weight: bold;
+    padding: 0 1em;
+}
+
+.news--contenido--info--img {
+    width: 100%;
+    height: auto;
+}
