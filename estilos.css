@@ -15,12 +15,18 @@
 html {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     background: url('bg_tile.jpg');
     background-size: 40%;
+    color: var(--blanco);
     /* height: 300vh; */
+}
+
+.oculto {
+    display: none;
 }
 
 .header {
@@ -63,8 +69,12 @@ body {
     background: rgba(0, 0, 0, 0.507);
 }
 
+.main--slider {
+    height: 152.34375vw;
+}
+
 .main--slider--img {
-    /* position: absolute; */
+    position: absolute;
     animation-duration: 18s;
     animation-timing-function: linear;
     animation-name: aparecer;
@@ -88,7 +98,7 @@ body {
     }
 
     32.77% {
-        filter: opacity(1)
+        filter: opacity(1);
     }
 
     33.33% {
@@ -101,6 +111,7 @@ body {
     padding: 1.5em 0;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .main--slider--punto--circulo {
@@ -293,4 +304,90 @@ body {
 
 .redes--link--text--cuenta {
     font-size: calc(0.58rem + 1vw);
+}
+
+/*EMPIEZA FOOTER*/
+
+.footer {
+    background: #000;
+    padding: 2.5em 3em;
+}
+
+.footer--firm--img {
+    width: 100%;
+}
+
+.footer--share {
+    font-size: calc(0.78rem + 1vw);
+    color: var(--blanco);
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+}
+
+.footer--share--img {
+    width: 2.5454em;
+    height: auto;
+    vertical-align: middle;
+    margin: 0 0 0 1.5em;
+}
+
+.footer--share--img:nth-of-type(1) {
+    margin: 0 0 0 2.3em;
+}
+
+.footer--firm--logo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer--firm--logo--img:nth-of-type(1) {
+    width: 35%;
+    /* max-height: 45.2167px; */
+    max-height: 6vw;
+}
+
+.footer--firm--logo--img:nth-of-type(2) {
+    height: calc(6vw + 2.5vw);
+    width: 35%;
+}
+
+.footer--idioma, .footer--idioma--link {
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer--idioma {
+    font-size: calc(0.88rem + 1vw);
+}
+
+.footer--cookies--a {
+    color: var(--blanco);
+}
+
+.footer--cookies {
+    text-align: center;
+    font-size: calc(0.68rem + 1vw);
+}
+
+.footer--all--rights {
+    color: grey;
+    text-align: center;
+}
+
+.footer--firm--img, .footer--firm--logo--idioma, .footer--cookies, .footer--all--rights, .footer--share, .footer--firm--logo, .footer--idioma {
+    margin-bottom: 2rem;
+}
+
+.footer--all--rights {
+    font-size: calc(0.43rem + 1vw);
+}
+
+.link--arriba--img {
+    width: 7vw;
+    height: auto;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1em;
 }

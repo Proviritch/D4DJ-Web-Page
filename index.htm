@@ -7,12 +7,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css"> 
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="1024.css" media="(min-width: 1024px)"> 
     <title>D4DJ Official Website</title>
 </head>
-<body>
+<body id="main">
     <header class="header">
         <img src="logo_d4dj_white.png" alt="" class="header--logo">
+        <nav class="nav oculto">
+            <ul class="nav--ul">
+                <a href="#" class="nav--ul--a"><li class="nav--ul--li">News</li></a>
+                <a href="#" class="nav--ul--a"><li class="nav--ul--li">Character</li></a>
+                <a href="#" class="nav--ul--a"><li class="nav--ul--li">Artist</li></a>
+                <a href="#" class="nav--ul--a"><li class="nav--ul--li">Music</li></a>
+                <a href="#" class="nav--ul--a"><li class="nav--ul--li">Animation</li></a>
+                <a href="#" class="nav--ul--a"><li class="nav--ul--li">Game</li></a>
+                <a href="#" class="nav--ul--a"><li class="nav--ul--li">Special</li></a>
+            </ul>
+        </nav>
+        <div class="header--redes oculto">
+            <p class="header--redes--p">OFFICIAL</p>
+            <a href="" class="header--icons--link"><img src="icon_twitter_white.png" alt="" class="header--redes--icons"></a>
+            <a href="" class="header--icons--link"><img src="icon_youtube_white.png" alt="" class="header--redes--icons"></a>
+            <a href="" class="header--icons--link"><img src="icon_facebook_white.png" alt="" class="header--redes--icons"></a>
+            <a href="" class="header--icons--link"><img src="icon_instagram_white.png" alt="" class="header--redes--icons"></a>
+        </div>
         <svg class="header--svg" viewBox="0 0 24 24">
             <circle class="hamburgesa" cx="50%" cy="50%" r="11"/>
             <line class="hamburgesa" x1="4" x2="20" y1="10" y2="10"/>
@@ -21,15 +40,24 @@
     </header>
     <main class="main">
         <section class="main--slider">
-            <img src="img_anime_promo_mobile.jpg" alt="" class="main--slider--img slider--anime">
-            <img src="img_petitmix_mobile.jpg" alt="" class="main--slider--img slider--petitmix">
-            <img src="imgl_groovymix_mobile.jpg" alt="" class="main--slider--img slider--groovymix">
-            <div class="main--slider--punto">
-                <div class="main--slider--punto--circulo"></div>
-                <div class="main--slider--punto--circulo"></div>
-                <div class="main--slider--punto--circulo"></div>
-            </div>
+            <picture class="main--picture">
+                <source srcset="img_anime_promo_desktop.jpg" class="main--slider--img slider--anime anime" media="(min-width: 1024px)"/>
+                <img src="img_anime_promo_mobile.jpg" alt="" class="main--slider--img slider--anime anime">
+            </picture>
+            <picture class="main--picture">
+                <source srcset="img_groovymix_desktop.jpg" class="main--slider--img slider--anime groovy" media="(min-width: 1024px)"/>
+                <img src="imgl_groovymix_mobile.jpg" alt="" class="main--slider--img slider--groovymix groovy">
+            </picture>
+            <picture class="main--picture">
+                <source srcset="img_petitmix_desktop.jpg" class="main--slider--img slider--anime petit" media="(min-width: 1024px)"/>
+                <img src="img_petitmix_mobile.jpg" alt="" class="main--slider--img slider--petitmix petit">
+            </picture>
         </section>
+        <div class="main--slider--punto">
+            <div class="main--slider--punto--circulo"></div>
+            <div class="main--slider--punto--circulo"></div>
+            <div class="main--slider--punto--circulo"></div>
+        </div>
         <section class="section--news">
             <!-- <p class="section--news--title">News</p> -->
             <svg class="section--news--title" viewBox="0 0 100 20">
@@ -127,12 +155,15 @@
     <footer class="footer">
         <img src="store_img.png" alt="" class="footer--firm--img">
         <div class="footer--firm--logo--idioma">
-            <div class="footer--share"></div>
-            <div class="footer--firm--logo"></div>
+            <p class="footer--share">SHARE<img src="icon_social-media_twitter.png" alt="" class="footer--share--img"><img src="icon_social-media_facebook.png" alt="" class="footer--share--img"></p>
+            <div class="footer--firm--logo">
+                <img src="logo_bushiroad.png" alt="" class="footer--firm--logo--img"><img src="logo_bushiroad-music.png" alt="" class="footer--firm--logo--img">
+            </div>
             <p class="footer--idioma"><a href="" class="footer--idioma--link">JP</a> | <a href="" class="footer--idioma--link">EN</a></p>
         </div>
-        <p class="footer--cookies"> <a href="" class="footer--cookies--a"></a> </p>
-        <p class="footer--all--rights"></p>
+        <p class="footer--cookies"><a href="" class="footer--cookies--a">Cookie Policy</a> <a href="" class="footer--cookies--a">Music Usage Guideline</a></p>
+        <p class="footer--all--rights">@bushiroad All Right Reserved.</p>
     </footer>
+    <a href="#main" class="link--arriba"><img src="flecha.png" alt="" class="link--arriba--img"></a>
 </body>
 </html>
