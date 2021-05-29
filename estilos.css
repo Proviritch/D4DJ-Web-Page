@@ -6,6 +6,7 @@
 
 :root {
     --rosita: #ff00df;
+    --rosita-opacidad: #ff00ddb2; 
     --rosa-claro: #fd58ff;
     --rosa-oscuro: #a90094;
     --rosa-neon: #fd58ff;
@@ -63,7 +64,7 @@ body {
     /* top: 400px; */
 }
 
-.main--slider--img, .main--slider {
+.main--slider--img, .main--slider, .main--slider--punto {
     width: 100%;
     height: auto;
     background: rgba(0, 0, 0, 0.507);
@@ -80,6 +81,7 @@ body {
     animation-name: aparecer;
     filter: opacity(0);
     animation-iteration-count: infinite;
+    display: block;
 }
 
 .slider--anime {
@@ -170,12 +172,7 @@ body {
 .section--news--contenido {
     width: 100%;
     display: flex;
-/*     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1em; */
     font-size: calc(0.68rem + 1vw);
-    color: var(--blanco);
     font-weight: bold;
     padding: 0 1em;
     flex-wrap: wrap;
@@ -186,6 +183,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 0.5em;
+    display: block;
 }
 
 .img--especial {
@@ -210,6 +208,7 @@ body {
     width: calc(0.335rem + 1vw);
     height: auto;
     margin-left: 0.5rem;
+    vertical-align: middle;
 }
 
 .news--path {
@@ -218,7 +217,6 @@ body {
 
 .news--contenido--more {
     text-align: right;
-    color: var(--blanco);
     font-family: 'Barlow', sans-serif;
     font-size: calc(0.68rem + 1vw);
     font-weight: bold;
@@ -238,12 +236,11 @@ body {
 }
 
 .about--text {
-    color: var(--blanco);
     padding: 0 15%;
     text-align: center;
     line-height: 2em;
     font-size: calc(0.68rem + 1vw);
-    margin-bottom: 3em;
+    padding-bottom: 3em;
 }
 
 .about--text--span {
@@ -262,13 +259,12 @@ body {
     background: var(--rosita);
     opacity: 0.4;
     filter: blur(10px);
-    font-size: calc(0.68rem + 1vw);
-    bottom: calc(-5em - 4vw);
 }
 
 .socialmedia {
     position: relative;
-    z-index: -1;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .socialmedia--redes {
@@ -319,7 +315,6 @@ body {
 
 .footer--share {
     font-size: calc(0.78rem + 1vw);
-    color: var(--blanco);
     font-family: 'Barlow', sans-serif;
     text-align: center;
 }
@@ -342,7 +337,6 @@ body {
 
 .footer--firm--logo--img:nth-of-type(1) {
     width: 35%;
-    /* max-height: 45.2167px; */
     max-height: 6vw;
 }
 

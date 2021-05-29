@@ -1,3 +1,7 @@
+body {
+    background-size: 20%;
+}
+
 .header {
     align-items: center;
     font-family: 'Barlow', sans-serif;
@@ -72,7 +76,7 @@
 }
 
 .nav--ul--a:hover .nav--ul--li::before  {
-    transform: translateY(100%);
+    transform: translateY(105%);
 }
 
 .nav--ul--a {
@@ -80,11 +84,196 @@
     color: var(--blanco);
 }
 
-.main--slider:hover .groovy, .main--slider:hover .petit, .main--slider:hover .anime{
-    transform: scale(1.1);
+.main--slider:hover .groovy, .main--slider:hover .petit, .main--slider:hover .anime {
+    transform: scale(1.02);
+}
+
+.groovy, .petit, .anime {
+    transition: 0.2s linear;
 }
 
 .main--slider {
-    height: 62.5vw;
+    height: 61.5vw;
     overflow: hidden;
+    position: relative;
 }
+
+.section--news--contenido {
+    flex-wrap: nowrap;
+}
+
+.section--news--contenido--info {
+    width: 25%;
+}
+
+.section--news--contenido--info:hover .news--contenido--info--img {
+    mix-blend-mode: screen;
+}
+
+.section--news--contenido--info:hover .news--contenido--info--img--padre {
+    background: var(--rosita-opacidad);
+}
+
+.news--contenido--info--info, .news--contenido--info--fecha {
+    transition: 0.2s linear;
+}
+
+.section--news--contenido--info:hover .news--contenido--info--info, .section--news--contenido--info:hover .news--contenido--info--fecha, .news--contenido--more:hover {
+    color: var(--rosita);
+}
+
+.img--especial {
+    height: 12.89228515625vw;
+    position: relative;
+}
+
+.news--contenido--info--img--padre {
+    border-radius: 0.5em;
+    transition: 0.2s linear;
+}
+
+.news--contenido--info--img {
+    mix-blend-mode: normal;
+    transition: 0.2s linear;
+}
+
+.section--news--title--text {
+    font-size: 0.5rem;
+    stroke-width: 0.2;
+}
+
+.section--news--title {
+    width: 100%;
+    height: 10vw;
+}
+
+.about {
+    background: url('bg_about_desktop.png'), linear-gradient(rgba(0, 0, 0, 0.507) 80%, transparent);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center 3vw, top center;
+}
+
+.socialmedia--redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    font-size: calc(0.68rem + 0.4vw);
+}
+
+.socialmedia--redes--link {
+    width: calc(50% - 1em);
+    font-size: 1em;
+    margin: 0;
+    border: 2px solid var(--rosa-oscuro);
+    transition: 0.2s linear;
+}
+
+.socialmedia--redes--link:hover {
+    color: var(--rosa-claro);
+}
+
+.redes--link--text--cuenta {
+    font-size: calc(0.58rem + 0.4vw);
+}
+
+.socialmedia--redes--link:nth-of-type(3), .socialmedia--redes--link:nth-of-type(6) {
+    margin-bottom: 0em;
+}
+
+.footer--firm--img {
+    padding: 0 35%;
+}
+
+.footer--firm--logo--idioma {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer--all--rights {
+    text-align: left;
+}
+
+.footer--idioma {
+    order: 1;
+}
+
+.footer--firm--logo {
+    order: 0;
+}
+
+.footer--share {
+    order: 2;
+}
+
+.footer--firm--logo--img:nth-of-type(1) {
+    width: 30%;
+    /* max-height: 45.2167px; */
+    max-height: 2vw;
+}
+
+.footer--firm--logo--img:nth-of-type(2) {
+    height: calc(2vw + 0.83333vw);
+    width: 30%;
+}
+
+.footer--idioma {
+    font-size: calc(0.88rem + 0.25vw);
+    /* margin: 0 37.5% 0 0; */
+}
+
+.footer--share {
+    font-size: calc(0.78rem + 0.25vw);
+    text-align: right;
+}
+
+.footer--firm--img, .footer--firm--logo--idioma, .footer--cookies, .footer--all--rights, .footer--share, .footer--firm--logo, .footer--idioma {
+    margin-bottom: 0;
+}
+
+.footer--share, .footer--firm--logo, .footer--idioma {
+    width: 33.33%;
+}
+
+.footer--firm--logo {
+    display: flex;
+    gap: 1vw;
+    justify-content: start;
+}
+
+.footer--cookies {
+    /* text-align: center; */
+    font-size: calc(0.68rem + 0.25vw);
+}
+
+.footer--all--rights {
+    font-size: calc(0.43rem + 0.25vw);
+}
+
+.footer--idioma--link {
+    transition: 0.2s linear;
+}
+
+.footer--idioma--link:hover, .footer--cookies--a:hover {
+    color: var(--rosa-oscuro);
+}
+
+.footer--firm--logo--img, .footer--share--img, .footer--firm--img {
+    filter: opacity(1);
+    transition: 0.2s linear;
+}
+
+.footer--firm--logo--img:hover, .footer--share--img:hover, .footer--firm--img:hover {
+    filter: opacity(0.5);
+}
+
+.footer--cookies--a {
+    transition: 0.2s linear;
+}
+
+.link--arriba--img {
+    width: 4vw;
+}
+
